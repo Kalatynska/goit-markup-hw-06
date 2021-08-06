@@ -466,15 +466,52 @@
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
+        <p class="contact-form-title">
+          Оставьте свои данные, мы вам перезвоним
+        </p>
         <form action="#" class="contact-form">
-          <input type="text" class="contact-form-input" />
-          <input type="text" class="contact-form-input" />
-          <input type="text" class="contact-form-input" />
+          <p>Имя</p>
+          <input
+            type="text"
+            class="contact-form-input"
+            name="user-name"
+            required
+            minlength="2"
+          />
+          <p>Телефон</p>
+          <input
+            type="tel"
+            class="contact-form-input"
+            name="user-phone"
+            required
+          />
+          <p>Почта</p>
+          <input
+            type="email"
+            class="contact-form-input"
+            name="user-email"
+            required
+          />
+          <p>Комментарий</p>
           <input
             type="text"
             class="contact-form-input contact-form-input-text"
             placeholder="Введите текст"
+            name="user-comment"
           />
+
+          <input
+            type="checkbox"
+            class="contact-form-checkbox"
+            name="agreement"
+            value="accepted"
+            id=""
+          />
+          <span class="contact-form-checkbox-condition">
+            Соглашаюсь с рассылкой и принимаю</span
+          >
+          <a href="#">Условия договора</a>
+
           <button type="submit" class="contact-form-submit">Отправить</button>
         </form>
 

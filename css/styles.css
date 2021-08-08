@@ -895,12 +895,16 @@ address {
 .contact-form-checkbox:checked + .contact-form-checkbox-label::before {
   background-image: url(../images/icon-checked.svg);
   border: none;
+  outline: none;
 }
 
 .contact-form-checkbox:focus + .contact-form-checkbox-label::before {
   outline: 1px solid rgba(0, 0, 255, 0.5);
 }
 
+.contact-form-checkbox:hover + .contact-form-checkbox-label::before {
+  outline: none;
+}
 .contact-form a {
   font-size: 14px;
   line-height: 1.71;

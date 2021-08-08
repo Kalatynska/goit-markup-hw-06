@@ -875,11 +875,11 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-  margin-bottom: 30px;
 }
 
 .contact-form-checkbox-label {
   display: flex;
+  margin-bottom: 30px;
 }
 .contact-form-checkbox-label::before {
   content: "";

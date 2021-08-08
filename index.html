@@ -395,7 +395,7 @@
 
     <footer class="contacts" id="contacts">
       <div class="container container-footer">
-        <div>
+        <div class="container-address">
           <a href="./" class="logo logo-footer"
             ><span class="logo-accent"> Web</span>Studio</a
           >
@@ -426,7 +426,7 @@
         </div>
 
         <div class="social-media list">
-          <p>Присоединяйтесь</p>
+          <p class="footer-form-title">Присоединяйтесь</p>
           <ul class="social-media-list social-media-footer list">
             <li class="social-media-item">
               <a href="#" class="social-media-link media-link-footer">
@@ -458,68 +458,125 @@
             </li>
           </ul>
         </div>
-        <div>
-          <form action="#" class="subscribtion-form"></form>
+
+        <div class="subscription">
+          <form action="#" class="">
+            <p class="footer-form-title">Подпишитесь на рассылку</p>
+            <div class="subscription-form">
+              <input
+                type="email"
+                class="subscription-form-input"
+                name="user-email"
+                required
+                id="email"
+                placeholder="E-mail"
+              />
+              <svg class="subscription-form-icon" width="24px" height="24px">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+              <button type="submit" class="subscription-form-submit button">
+                Подписаться
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </footer>
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <p class="contact-form-title">
-          Оставьте свои данные, мы вам перезвоним
-        </p>
-        <form action="#" class="contact-form">
-          <p>Имя</p>
-          <input
-            type="text"
-            class="contact-form-input"
-            name="user-name"
-            required
-            minlength="2"
-          />
-          <p>Телефон</p>
-          <input
-            type="tel"
-            class="contact-form-input"
-            name="user-phone"
-            required
-          />
-          <p>Почта</p>
-          <input
-            type="email"
-            class="contact-form-input"
-            name="user-email"
-            required
-          />
-          <p>Комментарий</p>
-          <input
-            type="text"
-            class="contact-form-input contact-form-input-text"
-            placeholder="Введите текст"
-            name="user-comment"
-          />
-
-          <input
-            type="checkbox"
-            class="contact-form-checkbox"
-            name="agreement"
-            value="accepted"
-            id=""
-          />
-          <span class="contact-form-checkbox-condition">
-            Соглашаюсь с рассылкой и принимаю</span
-          >
-          <a href="#">Условия договора</a>
-
-          <button type="submit" class="contact-form-submit">Отправить</button>
-        </form>
-
         <button class="modal-close-btn" data-modal-close>
           <svg class="icon-close" width="18px" height="18px">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+
+        <form action="#" class="contact-form">
+          <p class="contact-form-title">
+            Оставьте свои данные, мы вам перезвоним
+          </p>
+
+          <label for="name">
+            <span class="input-name">Имя</span>
+            <span class="modal-form-input-wrapper">
+              <svg class="modal-form-icon" width="12px" height="12px">
+                <use href="./images/icons.svg#icon-user-name"></use>
+              </svg>
+              <input
+                type="text"
+                class="contact-form-input"
+                name="user-name"
+                required
+                minlength="2"
+                id="name"
+                pattern="[a-zA-Zа-яёА-ЯЁ]+"
+              />
+            </span>
+          </label>
+
+          <label for="phone">
+            <span class="input-name">Телефон</span>
+
+            <span class="modal-form-input-wrapper">
+              <svg class="modal-form-icon" width="12px" height="12px">
+                <use href="./images/icons.svg#icon-user-phone"></use>
+              </svg>
+              <input
+                type="tel"
+                class="contact-form-input"
+                name="user-phone"
+                required
+                id="phone"
+                title="+38-096-00-00"
+              />
+            </span>
+          </label>
+
+          <label for="mail">
+            <span class="input-name">Почта</span>
+
+            <span class="modal-form-input-wrapper">
+              <svg class="modal-form-icon" width="12px" height="12px">
+                <use href="./images/icons.svg#icon-user-email"></use>
+              </svg>
+              <input
+                type="email"
+                class="contact-form-input"
+                name="user-email"
+                required
+                id="mail"
+              />
+            </span>
+          </label>
+
+          <label for="comment">
+            <span class="input-name">Комментарий</span>
+            <textarea
+              class="contact-form-input contact-form-message"
+              placeholder="Введите текст"
+              name="user-comment"
+              id="comment"
+            ></textarea>
+          </label>
+          <input
+            type="checkbox"
+            class="contact-form-checkbox visually-hidden"
+            name="agreement"
+            value="accepted"
+            id="agreement"
+            required
+          />
+          <label for="agreement" class="contact-form-checkbox-label"
+            ><span class="contact-form-checkbox-condition">
+              Соглашаюсь с рассылкой и принимаю&nbsp;</span
+            >
+            <a href="#">Условия договора</a>
+          </label>
+
+          <button type="submit" class="contact-form-submit button">
+            Отправить
+          </button>
+        </form>
       </div>
     </div>
 
